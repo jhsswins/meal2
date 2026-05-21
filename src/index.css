@@ -1,0 +1,81 @@
+@import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+
+@font-face {
+  font-family: "Gmarket Sans";
+  src: url("/fonts/GmarketSansTTFMedium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gmarket Sans";
+  src: url("/fonts/GmarketSansTTFBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import "tailwindcss";
+
+@theme {
+  --color-deep-olive: #4F6F00;
+  --color-olive-green: #6B7F1A;
+  --color-sage-green: #DDE8B2;
+  --color-cream-bg: #FAF7EF;
+  --color-card-white: #FFFFFF;
+  --color-warm-peach: #FFE7DD;
+  --color-soft-gray: #EEF0EA;
+  --color-text-dark: #2A241A;
+  
+  --shadow-warm-soft: 0 4px 20px rgba(89, 99, 56, 0.08);
+  --shadow-warm-deep: 0 8px 24px rgba(60, 85, 0, 0.08);
+}
+
+html,
+body,
+#root,
+.app,
+.app-shell,
+.mobile-app,
+.screen,
+.screen *,
+button,
+input,
+select,
+textarea {
+  font-family: "Gmarket Sans", "GmarketSans", "Pretendard", "Noto Sans KR", sans-serif;
+}
+
+body {
+  background-color: #FAF7EF; /* Cream Background */
+  color: #2A241A; /* Text Dark */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Custom styles for progress bars and elements */
+progress::-webkit-progress-bar {
+  background-color: #EEF0EA;
+  border-radius: 9999px;
+}
+progress::-webkit-progress-value {
+  background-color: #4F6F00;
+  border-radius: 9999px;
+}
+progress::-moz-progress-bar {
+  background-color: #4F6F00;
+  border-radius: 9999px;
+}
+
+/* Unselectable text fallback or helper utility */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
